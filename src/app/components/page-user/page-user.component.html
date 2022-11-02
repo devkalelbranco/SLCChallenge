@@ -1,0 +1,15 @@
+
+
+<app-user-card [user]="gitHubUser" [page-full]="true" ></app-user-card>
+
+<div class="user-repositories">    
+    <div class="user-repository-row">
+        <div class="repository-title" ><h3>Repositorios</h3></div>
+    </div>
+    <div class="user-repository-row" *ngFor="let item of gitHubUser.repositories" >                
+        <div class="repository-title" > <a href="{{item.html_url}}" target="_blank">{{item.name}}</a></div>        
+        <div class="repository-stars">{{item.stargazers_count}}<i class="fas fa-star"></i></div>
+    </div>        
+</div>
+
+
